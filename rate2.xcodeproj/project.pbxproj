@@ -457,6 +457,7 @@
 				5911DE1619ACB9D400490BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5911DE1719ACB9D400490BF1 /* Build configuration list for PBXNativeTarget "rate2Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				5911DE1919ACB9D400490BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
