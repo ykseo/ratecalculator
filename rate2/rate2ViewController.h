@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface rate2ViewController : UIViewController <NSXMLParserDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
+@interface rate2ViewController : UIViewController <NSXMLParserDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
 @property NSMutableData   *webData; // 서버 데이터 받아옴
 
 typedef enum {

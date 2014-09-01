@@ -16,8 +16,7 @@ Boolean dataGetFlag = NO;
 @synthesize webData;
 NSString *rateVelus;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     [self goToURL];
     [super viewDidLoad];
@@ -27,11 +26,11 @@ NSString *rateVelus;
         //여기다 로딩 애니메이션 처리하면 되겠다
     }
     dataGetFlag = NO;
-    //_inputKoreaMoney.keyboardType = UIKeyboardTypeNamePhonePad;
-    //_outputValue.keyboardType = UIKeyboardTypeNamePhonePad;
     //테스트 필드에 입력이 들어오면 클리어버튼을 활성화시킨다
     _inputKoreaMoney.clearButtonMode = UITextFieldViewModeWhileEditing;
     _outputValue.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    //shouldChangeCharactersInrange
 
 }
 - (void)goToURL{
@@ -174,8 +173,15 @@ NSString *rateVelus;
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        //cell.detailTextLabel.text가 아래에 작게표시됨
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        //cell.detailTextLabel.text가 우측 정렬로 크지만 회색으로 표시
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
+        //2개가 가우데 정렬로 서로 붙어나옴
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:simpleTableIdentifier];
     }
+    cell.detailTextLabel.text = [[_xmlParseData objectAtIndex:indexPath.row] objectForKey:@"standard"];
     cell.textLabel.text = [[_xmlParseData objectAtIndex:indexPath.row] objectForKey:@"hname"];
     return cell;
 }
@@ -199,7 +205,25 @@ NSString *rateVelus;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+	NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
+	[textField setText:[self moneyFormat:newText]];
+	return NO;
+}
+-(NSString*)moneyFormat:(NSString*)strNumber{
+    
+    //스트링을 INT로 변경
+	strNumber = [strNumber stringByReplacingOccurrencesOfString:@"," withString:@""];
+    int nTmp = [strNumber intValue];
+    
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    //NSString 으로 저장
+    NSString *formatedString = [fmt stringFromNumber:[NSNumber numberWithInt:nTmp]];
+    
+    return formatedString;
+}
 ///////////////////////////////////////////////////////////////////////////////////
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

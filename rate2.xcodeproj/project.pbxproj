@@ -21,6 +21,8 @@
 		5911DE0719ACB9D300490BF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911DDE919ACB9D300490BF1 /* UIKit.framework */; };
 		5911DE0F19ACB9D400490BF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5911DE0D19ACB9D400490BF1 /* InfoPlist.strings */; };
 		5911DE1119ACB9D400490BF1 /* rate2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5911DE1019ACB9D400490BF1 /* rate2Tests.m */; };
+		59F9887219B4B228003E6C49 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F9887019B4B228003E6C49 /* button.png */; };
+		59F9887319B4B228003E6C49 /* seletedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F9887119B4B228003E6C49 /* seletedButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		5911DE0C19ACB9D400490BF1 /* rate2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rate2Tests-Info.plist"; sourceTree = "<group>"; };
 		5911DE0E19ACB9D400490BF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5911DE1019ACB9D400490BF1 /* rate2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rate2Tests.m; sourceTree = "<group>"; };
+		59F9887019B4B228003E6C49 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../../../button.png; sourceTree = "<group>"; };
+		59F9887119B4B228003E6C49 /* seletedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seletedButton.png; path = ../../../seletedButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 		5911DDEB19ACB9D300490BF1 /* rate2 */ = {
 			isa = PBXGroup;
 			children = (
+				59F9887019B4B228003E6C49 /* button.png */,
+				59F9887119B4B228003E6C49 /* seletedButton.png */,
 				5911DDF419ACB9D300490BF1 /* rate2AppDelegate.h */,
 				5911DDF519ACB9D300490BF1 /* rate2AppDelegate.m */,
 				5911DDF719ACB9D300490BF1 /* Main.storyboard */,
@@ -230,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5911DDFE19ACB9D300490BF1 /* Images.xcassets in Resources */,
+				59F9887319B4B228003E6C49 /* seletedButton.png in Resources */,
+				59F9887219B4B228003E6C49 /* button.png in Resources */,
 				5911DDF019ACB9D300490BF1 /* InfoPlist.strings in Resources */,
 				5911DDF919ACB9D300490BF1 /* Main.storyboard in Resources */,
 			);
