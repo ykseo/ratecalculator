@@ -21,8 +21,10 @@
 		5911DE0719ACB9D300490BF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911DDE919ACB9D300490BF1 /* UIKit.framework */; };
 		5911DE0F19ACB9D400490BF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5911DE0D19ACB9D400490BF1 /* InfoPlist.strings */; };
 		5911DE1119ACB9D400490BF1 /* rate2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5911DE1019ACB9D400490BF1 /* rate2Tests.m */; };
-		59F9887219B4B228003E6C49 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F9887019B4B228003E6C49 /* button.png */; };
-		59F9887319B4B228003E6C49 /* seletedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F9887119B4B228003E6C49 /* seletedButton.png */; };
+		596832B719BF248E008CF77E /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 596832B219BF248E008CF77E /* TFHpple.m */; };
+		596832B819BF248E008CF77E /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 596832B419BF248E008CF77E /* TFHppleElement.m */; };
+		596832B919BF248E008CF77E /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 596832B619BF248E008CF77E /* XPathQuery.m */; };
+		596832BD19BF2C9D008CF77E /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 596832BC19BF2C9D008CF77E /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +57,14 @@
 		5911DE0C19ACB9D400490BF1 /* rate2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rate2Tests-Info.plist"; sourceTree = "<group>"; };
 		5911DE0E19ACB9D400490BF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5911DE1019ACB9D400490BF1 /* rate2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rate2Tests.m; sourceTree = "<group>"; };
-		59F9887019B4B228003E6C49 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../../../button.png; sourceTree = "<group>"; };
-		59F9887119B4B228003E6C49 /* seletedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seletedButton.png; path = ../../../seletedButton.png; sourceTree = "<group>"; };
+		596832B119BF248E008CF77E /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		596832B219BF248E008CF77E /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		596832B319BF248E008CF77E /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		596832B419BF248E008CF77E /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		596832B519BF248E008CF77E /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		596832B619BF248E008CF77E /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		596832BA19BF29C0008CF77E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		596832BC19BF2C9D008CF77E /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596832BD19BF2C9D008CF77E /* libxml2.2.dylib in Frameworks */,
 				5911DDE819ACB9D300490BF1 /* CoreGraphics.framework in Frameworks */,
 				5911DDEA19ACB9D300490BF1 /* UIKit.framework in Frameworks */,
 				5911DDE619ACB9D300490BF1 /* Foundation.framework in Frameworks */,
@@ -105,6 +114,8 @@
 		5911DDE419ACB9D300490BF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				596832BC19BF2C9D008CF77E /* libxml2.2.dylib */,
+				596832BA19BF29C0008CF77E /* libxml2.dylib */,
 				5911DDE519ACB9D300490BF1 /* Foundation.framework */,
 				5911DDE719ACB9D300490BF1 /* CoreGraphics.framework */,
 				5911DDE919ACB9D300490BF1 /* UIKit.framework */,
@@ -116,8 +127,7 @@
 		5911DDEB19ACB9D300490BF1 /* rate2 */ = {
 			isa = PBXGroup;
 			children = (
-				59F9887019B4B228003E6C49 /* button.png */,
-				59F9887119B4B228003E6C49 /* seletedButton.png */,
+				596832B019BF248E008CF77E /* TFHpple */,
 				5911DDF419ACB9D300490BF1 /* rate2AppDelegate.h */,
 				5911DDF519ACB9D300490BF1 /* rate2AppDelegate.m */,
 				5911DDF719ACB9D300490BF1 /* Main.storyboard */,
@@ -156,6 +166,19 @@
 				5911DE0D19ACB9D400490BF1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		596832B019BF248E008CF77E /* TFHpple */ = {
+			isa = PBXGroup;
+			children = (
+				596832B119BF248E008CF77E /* TFHpple.h */,
+				596832B219BF248E008CF77E /* TFHpple.m */,
+				596832B319BF248E008CF77E /* TFHppleElement.h */,
+				596832B419BF248E008CF77E /* TFHppleElement.m */,
+				596832B519BF248E008CF77E /* XPathQuery.h */,
+				596832B619BF248E008CF77E /* XPathQuery.m */,
+			);
+			path = TFHpple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5911DDFE19ACB9D300490BF1 /* Images.xcassets in Resources */,
-				59F9887319B4B228003E6C49 /* seletedButton.png in Resources */,
-				59F9887219B4B228003E6C49 /* button.png in Resources */,
 				5911DDF019ACB9D300490BF1 /* InfoPlist.strings in Resources */,
 				5911DDF919ACB9D300490BF1 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +282,9 @@
 				5911DDF219ACB9D300490BF1 /* main.m in Sources */,
 				5911DDFC19ACB9D300490BF1 /* rate2ViewController.m in Sources */,
 				5911DDF619ACB9D300490BF1 /* rate2AppDelegate.m in Sources */,
+				596832B719BF248E008CF77E /* TFHpple.m in Sources */,
+				596832B919BF248E008CF77E /* XPathQuery.m in Sources */,
+				596832B819BF248E008CF77E /* TFHppleElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +411,16 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rate2/rate2-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "rate2/rate2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -400,6 +434,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rate2/rate2-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "rate2/rate2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -7,29 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface rate2ViewController : UIViewController <NSXMLParserDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
+#import "TFHpple.h"
+@interface rate2ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate,UIWebViewDelegate>
 @property NSMutableData   *webData; // 서버 데이터 받아옴
-
-typedef enum {
-    etNone = 0,
-    etItem
-} eElementType;
-@property eElementType elementType;
-@property NSMutableString *xmlValue;
-@property NSMutableData *receiveData;
+@property TFHppleElement *element;
+@property TFHpple *xpathParser;
+@property NSArray *parseData;
 @property NSMutableArray *xmlParseData;
 @property NSMutableDictionary *currectItem;
+///////////////////////////////////
+@property (weak, nonatomic) IBOutlet UILabel *lodingDate;
+@property (weak, nonatomic) IBOutlet UISwitch *cashOrRenittance;
+@property (weak, nonatomic) IBOutlet UISwitch *changeLable;
+@property (weak, nonatomic) IBOutlet UILabel *changeLable1;
+@property (weak, nonatomic) IBOutlet UILabel *changeLable2;
 
-//@property float rate;
-
-//@property (weak, nonatomic) IBOutlet UITableView *countryRate;
-@property (weak, nonatomic) IBOutlet UILabel *titleLable;
 @property (weak, nonatomic) IBOutlet UILabel *seleteCountry;
-@property (weak, nonatomic) IBOutlet UILabel *koreaMoney;
 @property (weak, nonatomic) IBOutlet UITextField *inputKoreaMoney;
-@property (weak, nonatomic) IBOutlet UIButton *arithmeticBut;
-@property (weak, nonatomic) IBOutlet UIButton *removeBut;
 @property (weak, nonatomic) IBOutlet UITextField *outputValue;
 @end
 
